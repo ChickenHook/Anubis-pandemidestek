@@ -12,7 +12,7 @@ In March 2020 an articel was published telling about banking Tojan campaigns aga
 
 ## Paper
 
-**Paper**      [DOWNLOAD HERE](anubis_23_06_2020.pdf)
+**Paper**      [>> DOWNLOAD HERE <<](anubis_23_06_2020.pdf)
 
 ## META INFO
 
