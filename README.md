@@ -7,7 +7,7 @@ This work includes an analyzis of the Anubis malware variant **pandemidestek** d
 
 In December 2016 the the article "Android BOT from scratch" was published in which source code of a new Android banking trojan was shared. The first malware based on this code was spotted in January 2017 and from then on all derived Malware was called **BANKBOT**. Over time the malware was improved heavily and a second version of the malware was crafted named **ANUBIS**.
 
-In March 2020 an [article](https://blog.bushidotoken.net/2020/05/turkey-targeted-by-cerberus-and-anubis.html) was published telling about banking Tojan campaigns against Turkish banks meme to ba "gift" from thei'r mobile carrier due to COVID-19 Virus.
+In March 2020 an [article](https://blog.bushidotoken.net/2020/05/turkey-targeted-by-cerberus-and-anubis.html) was published telling about banking Tojan campaigns against Turkish banks meme to be a "gift" from thei'r mobile carrier due to COVID-19 Virus.
 
 
 ## Paper
