@@ -12,7 +12,7 @@ In March 2020 an articel was published telling about banking Tojan campaigns aga
 
 ## Paper
 
-**Paper**      (DOWNLOAD HERE)[anubis_23_06_2020.pdf]
+**Paper**      [DOWNLOAD HERE](anubis_23_06_2020.pdf)
 
 ## META INFO
 
@@ -20,12 +20,12 @@ In March 2020 an articel was published telling about banking Tojan campaigns aga
 
 **name**       pandemidestek.apk
 
-**Virustotal** (KLICK HERE)[https://www.virustotal.com/gui/file/231d970ea3195b3ba3e11e390b6def78a1c8eb5f0a8b7dccc0b4ec4aee9292ec/detection]
+**Virustotal** [KLICK HERE](https://www.virustotal.com/gui/file/231d970ea3195b3ba3e11e390b6def78a1c8eb5f0a8b7dccc0b4ec4aee9292ec/detection)
 
 ## DOWNLOAD
 
-**Source**     (KLICK HERE)[https://dosya.org/f.php?h=0G8rhXAJ\&d=1]
+**Source**     [KLICK HERE](https://dosya.org/f.php?h=0G8rhXAJ\&d=1)
 
-**APK**        (DOWNLOAD HERE)[apk/pandemidestek.apk]
+**APK**        [DOWNLOAD HERE](apk/pandemidestek.apk)
 
 Related work of an older version of the malware can be found here: https://medium.com/@fs0c131y/reverse-engineering-of-the-anubis-malware-part-1-741e12f5a6bd
