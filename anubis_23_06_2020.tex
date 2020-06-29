@@ -51,7 +51,7 @@ This work includes an analyzis of the Anubis malware variant \textbf{pandemidest
 
 In December 2016 the the article "Android BOT from scratch" was published in which source code of a new Android banking trojan was shared. The first malware based on this code was spotted in January 2017 and from then on all derived Malware was called \textbf{BANKBOT}. Over time the malware was improved heavily and a second version of the malware was crafted named \textbf{ANUBIS}.\cite{ALLSTARTEDWITHBANKBOT} \cite{ANUBISTRENDMICRO}
 
-In March 2020 an articel was published telling about banking Tojan campaigns against Turkish banks meme to ba "gift" from the'r mobile carrier due to COVID-19 Virus \ref{COVID19REF}. \cite{ANUBISTURKEY2020} 
+In March 2020 an articel was published telling about banking Tojan campaigns against Turkish banks meming to ba "gift" of users mobile carrier due to COVID-19 Virus \ref{COVID19REF}. \cite{ANUBISTURKEY2020} 
 
 
 Related work of an older version of the malware can be found here: https://medium.com/@fs0c131y/reverse-engineering-of-the-anubis-malware-part-1-741e12f5a6bd
@@ -64,7 +64,7 @@ Related work of an older version of the malware can be found here: https://mediu
     Reverse engineering
 
 \section{INTRODUCTION}
-In the long history of the Anubis and Bankbot malware there were lot of modifications, targets and improvements to harvest banking information and much more. Starting with COVID-19 pandemic lot of actors started using Anubis malware to abuse the human disaster to spread and attack countries like Italy or Turkey. This work shall analyze and describe latest features of the malware discovered on June, 6th 2020.
+In the long history of the Anubis and Bankbot malware were a lot of modifications, targets and improvements to harvest banking information and much more. Starting with COVID-19 pandemic lot of actors started using Anubis malware to abuse the human disaster to spread and attack countries like Italy or Turkey. This work shall analyze and describe latest features of the malware discovered on March 2020.
 
 Here are some facts to identify this version of the malware:
 \begin{description}
@@ -76,7 +76,7 @@ Here are some facts to identify this version of the malware:
 \end{description}
 
 \subsection{RELATED WORK}
-In October 2018 the blogger \textbf{Elliot Anderson} published a analyzis of the at this time latest version of the Anubis malware \cite{REVEANUBIS}. It was called "HD TV Italy" and had arround 1.000 downloads from Google Play.
+In October 2018 the blogger \textbf{Elliot Anderson} published an analyzis of the at this time latest version of the Anubis malware \cite{REVEANUBIS}. In Google Play it was called "HD TV Italy" and had arround 1.000 downloads.
 His version of the malware was wrapped into a loader which loaded the acually code of the malware at runtime.
 
 \newpage
@@ -84,21 +84,21 @@ His version of the malware was wrapped into a loader which loaded the acually co
 
 \subsection{THE TEST SYSTEM}
 
-Because this malware is targeted to turkey marked a test environment that matches to the common share of android versions. An Android API of 26 represents the median of Android versions in turkey \cite{TURKEYANDROIDVERSIONS} and possibily let us explore more features of the malware since newer Android versions are more restricted. We choose an Emulator in order to make reproduce the observations and debugging more easy (Intel x86 Atom System Image, API 26, Revision 1). We try to use a rooted image in order to debug the malware without the need of repackaging. In order to verify if the behaviour is equal to a real device this procedure will be done on a real device with same Android version.
+Because this malware is targeted to turkey marked a test environment was applied that matches to the common share of android versions. An Android API of 26 represents the median of Android versions in turkey \cite{TURKEYANDROIDVERSIONS} and possibily let us explore more features of the malware since newer Android versions are more restricted. An Emulator is used in order to make reproduce the observations and debugging more easy (Intel x86 Atom System Image, API 26, Revision 1). A rooted image offers the option to debug the malware without the need of repackaging. In order to verify if the behaviour is equal to a real device this procedure will be done on a real device with same Android version.
 
 
 \subsection{INSTALLATION}
-In order to install the APK on our emulator we perform the following adb command
+In order to install the APK on the emulator the following adb command is required
 
 \begin{verbatim}
 adb install pandemidestek.apk
 \end{verbatim}
 
-Now we can open to the launcher and launch the malware.
+Now the App can launched from the launcher.
 
 
 \subsection{1. START THE APP}
-First observation after the user started the App is the Accessibility settings screen is opened. A toast message is showing up telling to grant accessibility permission to "pandemidestek" wich matches to our app name (see more in THE MANIFEST chapter). Even leaving this screen by clicking the HOME button enforces the settings activity to appear again (see attached video \textbf{anubis\_startup.webm} and Screenshot \ref{fig:anubis_open_accessibiltiy}). 
+First observation after the user started the App is the Accessibility settings screen is opened. A toast message is showing up telling to grant accessibility permission to "pandemidestek" wich matches to the app name. Even leaving this screen by clicking the HOME button enforces the settings activity to appear again (see attached video \textbf{anubis\_startup.webm} and Screenshot \ref{fig:anubis_open_accessibiltiy}). 
 
 %\linewidth%
 
@@ -119,7 +119,7 @@ The data folder of the app at this stage has size about 2.11MB.
 
 
 \subsection{2. GRANT ACCESSIBILITY PERMISSION}
-In order to continue the runtime behaviour we grant the Accessibility permission and the annoying popup of the Accessibility screen disappears.
+In order to continue observation ofthe runtime behaviour the Accessibility permission has to be granted and the annoying popup of the Accessibility screen disappears.
 
 
 
@@ -176,7 +176,7 @@ Ldalvik/system/DexClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
 \newpage
 \subsubsection{THE MANIFEST} \label{manifest}
-Analyze the \textit{AndroidManifest.xml} of the malware tells a lot about the power of the malware. Permissions for example can be used to identify possible device ressources the malware can access. Listing \ref{usedpermissions} lists all permissions the malware can be granted. Most of those permissions need the user to grant at runtime \cite[guide/topics/permissions/overview]{AndroidDev}.
+Analyzing the \textit{AndroidManifest.xml} tells a lot about the power of the malware. Permissions for example can be used to identify possible device ressources the malware can access. Listing \ref{usedpermissions} lists all permissions the malware can be granted. Most of those permissions need the user to grant at runtime \cite[guide/topics/permissions/overview]{AndroidDev}.
 
 \begin{lstlisting}[label=usedpermissions,caption=Permissions defined in the Manifest of the malware,frame=tb]
 	<uses-permission
@@ -273,7 +273,7 @@ Next finding is an \textit{BroadcastReceiver} with a huge amount of \textit{acti
 </intent-filter>
 \end{lstlisting}
 
-The version settings in the Manifest are telling that the malware must be at least from 2018 \cite[/studio/releases/platforms]{AndroidDev}.
+The version settings in the Manifest are telling that the malware code basis must be at least from 2018 \cite[/studio/releases/platforms]{AndroidDev}.
 
 \begin{lstlisting}[label=versionconfiguration,caption=Sdk version configuration defined in the \textit{AndroidManifest.xml},frame=tb]
     android:compileSdkVersion="28"
@@ -368,7 +368,7 @@ Analyzis of the Server side is not included in this work.
 
 \subsection{STARTUP AND INITIALIZATION}
 \subsubsection{RETRIEVE THE DEFAULT URL}
-A potential bot is inteded to communicate somehow in order to retrieve commandos what to do. Also most of malware applications are collecting data and transfer them to somewehere. Mostly this is done via a Web server that collects data and provides resources the malware can fetch at runtime. Potentially the malware can fetch multiple of those target URLs using an initial URL. This URL is very sensitive information because it tells a lot about the attacker and a potential Web host service could shutdown the server if this information is public also this malware is trying to obfuscate the default url(s). The function \textit{naqsl.ebxcb.exu.ifdf.ifdf()} is intended to deobfuscate those at runtime (see Listing \ref{deobfuscateurls}).
+Potentially a bot is inteded to communicate in order to retrieve commandos what to do. Also most of malware applications are collecting data and transfer them to somewehere. Mostly this is done via a Web server that collects data and provides resources the malware can fetch at runtime. Potentially the malware can fetch multiple of potential target URLs using an initial URL. This URL is very sensitive information because it tells a lot about the attacker and it could be forced to be shutdown by the government. Now this malware as well as most others is trying to obfuscate the default url(s). The function \textit{naqsl.ebxcb.exu.ifdf.ifdf()} is intended to deobfuscate those at runtime (see Listing \ref{deobfuscateurls}).
 
 \begin{lstlisting}[label=deobfuscateurls,caption=The function \textit{naqsl.ebxcb.exu.ifdf.ifdf()} deobfuscates the default URLs.,frame=tb]
 
@@ -412,7 +412,7 @@ http://hangikapi.com/tx.php
 
 \subsubsection{CORE SERVICES}\label{featureselection}
 
-This chapter is intended to tell how the malware launches, enables or disables particular features. In general the definition what service is currently enabled or disabled is persistently stored in the \textit{SharedPreferences} (see chapter \ref{datastructure}). 
+In general the definition what service is currently enabled or disabled is persistently stored in the \textit{SharedPreferences} (see chapter \ref{datastructure}). Background Services of the malware can read and write those settings depending on the environment or commandos fetched from the Web host.
 
 The Service \textit{naqsl.ebxcb.exu.ServiceCommands} is one of the core services of the malware. The service can be started with a command argument telling which attack shall be started. Most of features will be started and configured in this service. The function \textit{naqsl.ebxcb.exu.ServiceCommands.fddo()} is a very huge function intended to parse the command argument and configure the malware feature.
 

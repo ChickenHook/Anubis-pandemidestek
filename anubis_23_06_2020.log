@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.29)  29 JUN 2020 02:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.29)  29 JUN 2020 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -601,7 +601,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3684 strings out of 492982
  53078 string characters out of 6134895
- 161257 words of memory out of 5000000
+ 160257 words of memory out of 5000000
  7193 multiletter control sequences out of 15000+600000
  9337 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -618,7 +618,7 @@ blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt10.pfb>
-Output written on anubis_23_06_2020.pdf (35 pages, 730378 bytes).
+Output written on anubis_23_06_2020.pdf (35 pages, 730404 bytes).
 PDF statistics:
  172 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams
