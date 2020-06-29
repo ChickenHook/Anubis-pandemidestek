@@ -1,0 +1,627 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.29)  29 JUN 2020 02:43
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**anubis_23_06_2020.tex
+(./anubis_23_06_2020.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks17
+\thm@bodyfont=\toks18
+\thm@headfont=\toks19
+\thm@notefont=\toks20
+\thm@headpunct=\toks21
+\thm@preskip=\skip43
+\thm@postskip=\skip44
+\thm@headsep=\skip45
+\dth@everypar=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count90
+\float@exts=\toks23
+\float@box=\box26
+\@float@everytoks=\toks24
+\@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/spverbatim/spverbatim.sty
+Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count91
+\lst@gtempboxa=\box28
+\lst@token=\toks25
+\lst@length=\count92
+\lst@currlwidth=\dimen113
+\lst@column=\count93
+\lst@pos=\count94
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count95
+\lst@lineno=\count96
+\lst@maxwidth=\dimen116
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count97
+\lst@skipnumbers=\count98
+\lst@framebox=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(./anubis_23_06_2020.aux
+
+LaTeX Warning: Label `mainactivityoncreate' multiply defined.
+
+
+LaTeX Warning: Label `mainactivityoncreate' multiply defined.
+
+)
+\openout1 = `anubis_23_06_2020.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
+* v-part:(T,H,B)=(36.98866pt, 771.06952pt, 36.98866pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=540.60239pt
+* \textheight=771.06952pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-72.28133pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count99
+\scratchdimen=\dimen117
+\scratchbox=\box30
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen118
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count105
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `COVID19REF' on page 1 undefined on input line 54.
+
+[1]
+<anubis_accessibility.png, id=16, 1084.05pt x 1927.2pt>
+File: anubis_accessibility.png Graphic file (type png)
+<use anubis_accessibility.png>
+Package pdftex.def Info: anubis_accessibility.png  used on input line 107.
+(pdftex.def)             Requested size: 199.16928pt x 354.05626pt.
+ [2 <./anubis_accessibility.png>] [3]
+LaTeX Font Info:    Try loading font information for U+msa on input line 172.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 172.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 172.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 172.
+
+Overfull \hbox (155.4047pt too wide) in paragraph at lines 172--173
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[4]
+Overfull \hbox (25.47092pt too wide) in paragraph at lines 238--239
+[]\OT1/cmr/m/n/10 Another in-ter-est-ing find-ing is the ex-is-tence of a Ser-v
+ice with the \OT1/cmr/bx/n/10 an-droid.permission.BIND[]ACCESSIBILITY[]SERVICE
+ []
+
+[5]
+<hangikapicom.png, id=35, 1353.055pt x 670.505pt>
+File: hangikapicom.png Graphic file (type png)
+<use hangikapicom.png>
+Package pdftex.def Info: hangikapicom.png  used on input line 294.
+(pdftex.def)             Requested size: 540.60239pt x 267.90054pt.
+ [6] [7 <./hangikapicom.png>] [8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 375.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 375.
+
+Overfull \hbox (88.71542pt too wide) in paragraph at lines 419--420
+[]\OT1/cmr/m/n/10 In con-trast the Ser-vice \OT1/cmr/m/it/10 naqsl.ebxcb.exu.St
+artWhileGlobal \OT1/cmr/m/n/10 is the first back-ground ser-vice started within
+ the \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Activity.MainActivity
+ []
+
+[9] [10] [11]
+Overfull \hbox (32.97209pt too wide) in paragraph at lines 484--485
+\OT1/cmr/m/n/10 The API us-ages showed that the mal-ware is us-ing the \OT1/cmr
+/m/it/10 an-droid.media.projection.MediaProjectionManager.createScreenCaptureIn
+tent()
+ []
+
+
+Overfull \hbox (6.0563pt too wide) in paragraph at lines 495--497
+[]\OT1/cmr/m/n/10 In the \OT1/cmr/m/it/10 naqsl.ebxcb.exu.API.Screenshot.Activi
+tyScreenshot.onCreate \OT1/cmr/m/n/10 func-tion \OT1/cmr/m/it/10 star-tAc-tiv-i
+-ty-For-Re-sult \OT1/cmr/m/n/10 is called with the screen-
+ []
+
+
+Overfull \hbox (175.03049pt too wide) in paragraph at lines 498--501
+\OT1/cmr/m/n/10 turns a \OT1/cmr/m/it/10 an-droid.media.projection.MediaProject
+ion \OT1/cmr/m/n/10 ob-ject. This will be passed as ar-gu-ment into a call to \
+OT1/cmr/m/it/10 an-droid.media.projection.MediaProjection.createVirtualDisplay
+ []
+
+[12] [13] [14] [15]
+Overfull \hbox (23.40335pt too wide) in paragraph at lines 695--696
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[16]
+Overfull \hbox (17.40329pt too wide) in paragraph at lines 716--717
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[17]
+Overfull \hbox (11.40323pt too wide) in paragraph at lines 735--736
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[18]
+Overfull \hbox (185.61865pt too wide) in paragraph at lines 784--787
+[]\OT1/cmr/m/n/10 Listing 18[] lists all API calls to the Ac-ces-si-bil-ity Fra
+me-work of An-droid. The call to \OT1/cmr/m/it/10 an-droid.view.accessibility.A
+ccessibilityNodeInfo.findAccessibilityNodeInfosByText()
+ []
+
+
+Overfull \hbox (15.1215pt too wide) in paragraph at lines 784--787
+\OT1/cmr/m/it/10 android.view.accessibility.AccessibilityEvent.getText() \OT1/c
+mr/m/n/10 [[], /ref-er-ence/an-droid/view/ac-ces-si-bil-i-ty/Ac-ces-si-bil-i-ty
+Record#getText()].
+ []
+
+<accessibility_event_bp.png, id=79, 1886.04625pt x 888.31876pt>
+File: accessibility_event_bp.png Graphic file (type png)
+<use accessibility_event_bp.png>
+Package pdftex.def Info: accessibility_event_bp.png  used on input line 823.
+(pdftex.def)             Requested size: 540.60239pt x 254.62383pt.
+[19]
+Overfull \hbox (20.64075pt too wide) in paragraph at lines 830--831
+[]\OT1/cmr/m/n/10 The class \OT1/cmr/m/it/10 naqsl.ebxcb.exu.ServiceAccessibili
+ty \OT1/cmr/m/n/10 im-ple-ments the func-tion \OT1/cmr/m/it/10 naqsl.ebxcb.exu.
+ServiceAccessibility.onAccessibilityEvent
+ []
+
+[20 <./accessibility_event_bp.png>]
+Overfull \hbox (401.4072pt too wide) in paragraph at lines 839--840
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (77.4039pt too wide) in paragraph at lines 840--841
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (77.4039pt too wide) in paragraph at lines 841--842
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+[21]
+Overfull \hbox (77.4039pt too wide) in paragraph at lines 898--899
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+[22]
+Overfull \hbox (130.04362pt too wide) in paragraph at lines 931--932
+\OT1/cmr/m/n/10 for Run-time per-mis-sions like \OT1/cmr/m/it/10 an-droid.permi
+ssion.ACCESS[]FINE[]LOCATION\OT1/cmr/m/n/10 , call the func-tion \OT1/cmr/m/it/
+10 an-droid.location.LocationManager.requestLocationUpdates()
+ []
+
+[23]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no œ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ° in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ° in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ° in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ° in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ± in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no Ÿ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ± in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ± in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ± in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ± in font cmr10!
+
+Overfull \hbox (29.40341pt too wide) in paragraph at lines 991--992
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+[24]
+Overfull \hbox (17.40329pt too wide) in paragraph at lines 1034--1035
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
+[]\OT1/cmr/m/n/10 Listing 29: The on-Pos-tEx-e-cute func-tion spawns a no-ti-fi
+-ca-tion with a cu-som icon and the \OT1/cmr/m/it/10 naqs-l/e-
+ []
+
+
+Overfull \hbox (11.40323pt too wide) in paragraph at lines 1089--1090
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (5.40317pt too wide) in paragraph at lines 1106--1107
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[26] [27]
+Overfull \hbox (9.5327pt too wide) in paragraph at lines 1174--1175
+\OT1/cmr/m/n/10 tiv-i-ty-Man-ager#getRunningTasks(int)] and \OT1/cmr/m/it/10 an
+-droid.app.ActivityManager.getRunningAppProcesses() \OT1/cmr/m/n/10 [[], /ref-e
+r-ence/an-droid/ap-
+ []
+
+
+Overfull \hbox (72.51709pt too wide) in paragraph at lines 1211--1212
+[]\OT1/cmr/m/n/10 If an Ap-pli-ca-tion was found match-ing the value stored in 
+\OT1/cmr/m/it/10 Shared-Pref-er-ences \OT1/cmr/m/n/10 (see chap-ter 5.1.4[]) th
+e \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Activity.ActivityInjection
+ []
+
+
+LaTeX Warning: Citation `onStart()' on page 28 undefined on input line 1224.
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1249--1249
+[]\OT1/cmr/m/n/10 Listing 34: The func-tion \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Se
+rviceAccessibility\OT1/cmr/m/sl/10 $\OT1/cmr/m/it/10 fddo.run() \OT1/cmr/m/n/10
+ launches the
+ []
+
+[29] [30] [31] (./anubis_23_06_2020.lol
+Overfull \hbox (7.5765pt too wide) in paragraph at lines 8--8
+ [][] []\OT1/cmr/m/it/10 MainActivity.onCreate \OT1/cmr/m/n/10 calls \OT1/cmr/m
+/it/10 set-Com-po-nen-tEn-abled-Set-ting \OT1/cmr/m/n/10 with \OT1/cmr/m/it/10 
+COM-PO-NENT[]ENABLED[]STATE[]DISABLED 
+ []
+
+
+Overfull \hbox (7.49164pt too wide) in paragraph at lines 13--13
+ [][] []\OT1/cmr/m/n/10 Listing XX: Func-tion \OT1/cmr/m/it/10 naqsl.ebxcb.exu.
+Activity.ActivityGetSMS.fddo \OT1/cmr/m/n/10 builds the tar-get url and calls t
+he \OT1/cmr/m/it/10 intR.fddo() 
+ []
+
+
+Overfull \hbox (6.32175pt too wide) in paragraph at lines 14--14
+ [][] []\OT1/cmr/m/n/10 The func-tion \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Activity
+.ActivityGetNumber.fddo(ContentResolver con-tentRe-solver, String) \OT1/cmr/m/n
+/10 queries 
+ []
+
+
+Overfull \hbox (44.22504pt too wide) in paragraph at lines 14--14
+ \OT1/cmr/m/n/10 the list of phone num-bers stored in the de-vice ad-dress book
+ and for-wards each en-try \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Cint.m447int(Contex
+t 
+ []
+
+
+Overfull \hbox (8.93436pt too wide) in paragraph at lines 21--21
+ [][] []\OT1/cmr/m/n/10 The Ser-vice \OT1/cmr/m/it/10 naqsl.ebxcb.exu.StartWhil
+eRequest \OT1/cmr/m/n/10 starts the \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Activity.A
+ctivityAccessibility \OT1/cmr/m/n/10 fre-quently 
+ []
+
+
+Overfull \hbox (11.53508pt too wide) in paragraph at lines 25--25
+ \OT1/cmr/m/n/10 and starts the \OT1/cmr/m/it/10 naqsl.ebxcb.exu.ServiceModuleN
+otification \OT1/cmr/m/n/10 Ser-vice by call-ing the \OT1/cmr/m/it/10 an-droid.
+app.Context.startService() 
+ []
+
+
+Overfull \hbox (53.4358pt too wide) in paragraph at lines 29--29
+ [][] []\OT1/cmr/m/n/10 The on-Pos-tEx-e-cute func-tion spawns a no-ti-fi-ca-ti
+on with a cu-som icon and the \OT1/cmr/m/it/10 naqs-l/e-bxcb.exu.Activity.Activ
+ityPushInjection 
+ []
+
+
+Overfull \hbox (2.43088pt too wide) in paragraph at lines 31--31
+ \OT1/cmr/m/it/10 droid.app.ActivityManager.getRunningTasks() \OT1/cmr/m/n/10 [
+[]] and \OT1/cmr/m/it/10 an-droid.app.ActivityManager.getRunningAppProcesses() 
+
+ []
+
+[32]
+Overfull \hbox (17.9536pt too wide) in paragraph at lines 34--34
+ [][] []\OT1/cmr/m/n/10 The func-tion \OT1/cmr/m/it/10 naqsl.ebxcb.exu.ServiceA
+ccessibility\OT1/cmr/m/sl/10 $\OT1/cmr/m/it/10 fddo.run() \OT1/cmr/m/n/10 launc
+hes the \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Activity.ActivityInjection 
+ []
+
+)
+\tf@lol=\write3
+\openout3 = `anubis_23_06_2020.lol'.
+
+ [33]
+Underfull \hbox (badness 1184) in paragraph at lines 1338--1343
+\OT1/cmr/m/n/10 https://medium.com/@fs0c131y/reverse-engineering-of-the-anubis-
+malware-part-1-741e12f5a6bd, Ver-sion: android10-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1368--1372
+\OT1/cmr/m/n/10 https://blog.trendmicro.com/trendlabs-security-intelligence/anu
+bis-android-malware-returns-with-over-17000-samples/,
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 1374--1378
+[]\OT1/cmr/m/n/10 BushidoToken cy-ber-se-cu-rity, \OT1/cmr/m/it/10 Turkey tar-g
+eted by Cer-berus and Anu-bis An-droid bank-ing Tro-jan cam-paigns \OT1/cmr/m/n
+/10 ,
+ []
+
+Missing character: There is no â in font cmti10!
+Missing character: There is no € in font cmti10!
+Missing character: There is no ” in font cmti10!
+Missing character: There is no â in font cmti10!
+Missing character: There is no € in font cmti10!
+Missing character: There is no “ in font cmti10!
+
+Overfull \hbox (81.05994pt too wide) in paragraph at lines 1386--1390
+\OT1/cmr/m/n/10 http://www.ecie.com.ar/images/paginas/COVID-19/4MMWR-Severe[]Ou
+tcomes[]Among[]Patients[]with[]Coronavirus[]Disease[]2019[]COVID-
+ []
+
+[34
+
+] (./anubis_23_06_2020.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3684 strings out of 492982
+ 53078 string characters out of 6134895
+ 161257 words of memory out of 5000000
+ 7193 multiletter control sequences out of 15000+600000
+ 9337 words of font info for 35 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,5n,32p,982b,1445s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb>
+Output written on anubis_23_06_2020.pdf (35 pages, 730378 bytes).
+PDF statistics:
+ 172 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+

