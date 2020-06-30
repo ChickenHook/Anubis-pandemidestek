@@ -1007,7 +1007,7 @@ L_0x0d42:
 \newpage
 The intent service \textit{naqsl.ebxcb.exu.ServiceModuleNotification} implements an \textit{AsyncTask} that fetches an icon resource from a Web server. The Service implemnts the onHandleIntent function which (see Listing \ref{sevicemodulnotificationonhandleintent}) reads the url to gather the image from \textit{SharedPreferences} via the \textit{naqsl.ebxcb.exu.Cint.fddo()} (see Listing \ref{cintfddoreadfromsharedpreferences}) function and "url" as key (see chapter \ref{datastructure} and the ServiceModuleNotification.onHandleIntent). As seen in the chapter \ref{datastructure} the url in our test run was "http://hangikapi.com/icon/[appname].png"
 
-\begin{lstlisting}[label=sevicemodulnotificationonhandleintent,caption=\textit{naqsl.ebxcb.exu.ServiceModuleNotification.onHandleIntent()} collects neccessary strings from the intent extras as well as the target url using the \textit{f586fddo.fddo()} (f586fddo is a member of type \textit{naqsl.ebxcb.exu.Cint}) function. Then it executes the Async task \textit{naqsl.ebxcb.exu.ServiceModuleNotification.fddo}.,frame=tb]
+\begin{lstlisting}[label=sevicemodulnotificationonhandleintent,caption=\textit{naqsl.ebxcb.exu.ServiceModuleNotification.onHandleIntent()} collects necessary strings from the intent extras as well as the target url using the \textit{f586fddo.fddo()} (f586fddo is a member of type \textit{naqsl.ebxcb.exu.Cint}) function. Then it executes the Async task \textit{naqsl.ebxcb.exu.ServiceModuleNotification.fddo}.,frame=tb]
     public void onHandleIntent(Intent intent) {
         [...]                                            // YXBwbmFtZQ== = "appname"
         String stringExtra = intent.getStringExtra(Cint.m430int("YXBwbmFtZQ==")); 
@@ -1214,7 +1214,7 @@ public void fddo() {
                      .putExtra(Cint.m430int(Cint.m430int("YzNSeQ==")), str3); // str
 \end{lstlisting}
 
-The \textit{naqsl.ebxcb.exu.Activity.ActivityInjection} implements the \cite{onStart()} function with loads a WebView showing a URL constructed from settings and hardcoded values. This allowes the malware to update potential UI changes directly via Web resources instead of update the malware App on the client side. Also it's easier to apply attacks to new victims. (see Listing \ref{activityinjectiononstart})
+The \textit{naqsl.ebxcb.exu.Activity.ActivityInjection} implements the \textit{onStart()} function with loads a WebView showing a URL constructed from settings and hardcoded values. This allowes the malware to update potential UI changes directly via Web resources instead of update the malware App on the client side. Also it's easier to apply attacks to new victims. (see Listing \ref{activityinjectiononstart})
 \newpage
 \begin{lstlisting}[label=activityinjectiononstart,caption=The Activity \textit{naqsl.ebxcb.exu.Activity.ActivityInjection} shows a webview which allows to show dynamic content for phishing credentials or other sensitive information.,frame=tb]
 public void onStart() {
@@ -1265,7 +1265,7 @@ public void run() {
 
 \subsubsection{ENTER USSD CODES} \label{ussdcodes}
 The Activity \textit{naqsl.ebxcb.exu.Activity.ActivityStartUSSD} implements the funciton 
-\\ \textit{naqsl.ebxcb.exu.Activity.ActivityStartUSSD.onCreate()} that creates an intent with action \textbf{android.intent.action.CALL} and the USSD code as data parameter. (see \ref{ussdcodesoncreate})
+\\ \textit{naqsl.ebxcb.exu.Activity.ActivityStartUSSD.onCreate()} that creates an intent with action \textbf{android.intent.action.CALL} and the USSD code as data parameter. (see Listing \ref{ussdcodesoncreate})
 
 \begin{lstlisting}[label=ussdcodesoncreate,caption=The function \textit{naqsl.ebxcb.exu.Activity.ActivityStartUSSD.onCreate()} starts an \textbf{android.intent.action.CALL} intent in order to execute an USSD code.,frame=tb]
 public class ActivityStartUSSD extends Activity {
@@ -1284,7 +1284,7 @@ public class ActivityStartUSSD extends Activity {
 \end{lstlisting}
 
 
-This attack will be started from the \textit{naqsl.ebxcb.exu.ServiceCommands} Service (read more in chapter \ref{featureselection}.
+This attack will be started from the \textit{naqsl.ebxcb.exu.ServiceCommands} Service (read more in chapter \ref{featureselection}).
 
             
 \newpage

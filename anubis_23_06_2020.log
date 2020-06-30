@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.29)  30 JUN 2020 03:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.29)  30 JUN 2020 23:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -453,9 +453,6 @@ Overfull \hbox (72.51709pt too wide) in paragraph at lines 1204--1205
 e \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Activity.ActivityInjection
  []
 
-
-LaTeX Warning: Citation `onStart()' on page 28 undefined on input line 1217.
-
 [28]
 Underfull \hbox (badness 10000) in paragraph at lines 1242--1242
 []\OT1/cmr/m/n/10 Listing 35: The func-tion \OT1/cmr/m/it/10 naqsl.ebxcb.exu.Se
@@ -558,17 +555,14 @@ tcomes[]Among[]Patients[]with[]Coronavirus[]Disease[]2019[]COVID-
 
 ] (./anubis_23_06_2020.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3685 strings out of 492982
- 53123 string characters out of 6134895
+ 3684 strings out of 492982
+ 53112 string characters out of 6134895
  161277 words of memory out of 5000000
- 7194 multiletter control sequences out of 15000+600000
+ 7193 multiletter control sequences out of 15000+600000
  9337 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,5n,32p,989b,1445s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -584,7 +578,7 @@ blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt10.pfb>
-Output written on anubis_23_06_2020.pdf (35 pages, 728694 bytes).
+Output written on anubis_23_06_2020.pdf (35 pages, 728496 bytes).
 PDF statistics:
  172 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams

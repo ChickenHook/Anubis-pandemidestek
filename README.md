@@ -13,6 +13,7 @@ In March 2020 an [article](https://blog.bushidotoken.net/2020/05/turkey-targeted
 ## Paper
 
 **Paper**      [>> DOWNLOAD HERE <<](anubis_23_06_2020.pdf)
+**Blog**       [>> Read Blog Post <<](https://androidreverse.wordpress.com/2020/06/30/reverse-engineering-of-the-anubis-malware%e2%80%8a-%e2%80%8apandemistek-intended-for-the-turkish-market/)
 
 ## META INFO
 
